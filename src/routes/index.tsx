@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 
 import heatersHero from "@/assets/aquecedores-hero.png";
-import logoAsset from "@/assets/logo-tecgaz.jpg.asset.json";
 import { OrbitalHeaterHero } from "@/components/OrbitalHeaterHero";
 import { ServicesCarousel } from "@/components/ServicesCarousel";
 
@@ -56,6 +55,16 @@ const navLinks = [
   { label: "Soluções", href: "#solucoes" },
   { label: "Projetos", href: "#projetos" },
   { label: "Quem Somos", href: "#quem-somos" },
+];
+
+const brands = [
+  "Rinnai",
+  "Rheem",
+  "Komeco",
+  "Lorenzetti",
+  "Rowa",
+  "Aquakent",
+  "Inova",
 ];
 
 const reviews = [
@@ -194,15 +203,15 @@ function Index() {
       {/* Header / Navbar */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 px-4 py-3 backdrop-blur-xl sm:px-[5%]">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
-              src={logoAsset.url}
+              src="/logo-tecgaz.jpg"
               alt="TecGaz Aquecedores Guarulhos"
-              className="h-12 w-12 shrink-0 rounded-full border border-primary/40 object-cover shadow-lg shadow-primary/20"
+              className="h-14 w-14 shrink-0 rounded-full border-2 border-primary/40 object-cover shadow-lg shadow-primary/20 transition-transform group-hover:scale-105"
             />
             <div className="hidden leading-tight sm:block">
-              <div className="text-base font-bold tracking-tight text-foreground">TecGaz</div>
-              <div className="text-[11px] font-medium uppercase tracking-wide text-primary">
+              <div className="text-lg font-extrabold tracking-tight text-foreground">TecGaz</div>
+              <div className="text-[11px] font-bold uppercase tracking-wide text-primary">
                 Aquecedores a Gás
               </div>
             </div>
@@ -310,7 +319,7 @@ function Index() {
             </div>
           </div>
 
-          {/* 3D Planetary Orbital Ring Component (Brands Orbiting) */}
+          {/* 3D Planetary Orbital Ring Component */}
           <div className="w-full flex justify-center items-center">
             <OrbitalHeaterHero imageSrc={heatersHero} />
           </div>
@@ -320,6 +329,7 @@ function Index() {
       {/* Services Carousel Section */}
       <section id="servicos" className="section-texture bg-background px-4 py-20 sm:px-[5%] md:py-28">
         <div className="mx-auto max-w-7xl">
+          {/* Section Header */}
           <div className="mb-12 text-center md:mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary">
               <i className="fa-solid fa-fire-burner" />
@@ -333,6 +343,7 @@ function Index() {
             </p>
           </div>
 
+          {/* Interactive Responsive Carousel */}
           <ServicesCarousel />
         </div>
       </section>
@@ -369,6 +380,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
       {/* Google Reviews */}
       <section className="section-texture bg-background px-4 py-20 sm:px-[5%] md:py-28">
@@ -654,13 +666,13 @@ function Index() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src="/logo-tecgaz.jpg"
                 alt="TecGaz Aquecedores Guarulhos"
-                className="h-11 w-11 rounded-full object-cover"
+                className="h-12 w-12 rounded-full border border-primary/40 object-cover shadow-md"
               />
               <div>
                 <div className="font-bold text-foreground">TecGaz Aquecedores</div>
-                <div className="text-xs">Guarulhos - SP</div>
+                <div className="text-xs text-muted-foreground">Guarulhos - SP</div>
               </div>
             </div>
             <p className="max-w-xs leading-relaxed">
