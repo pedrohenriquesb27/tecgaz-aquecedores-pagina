@@ -58,16 +58,6 @@ const navLinks = [
   { label: "Quem Somos", href: "#quem-somos" },
 ];
 
-const brands = [
-  "Rinnai",
-  "Rheem",
-  "Komeco",
-  "Lorenzetti",
-  "Rowa",
-  "Aquakent",
-  "Inova",
-];
-
 const reviews = [
   {
     name: "Marcelo Andrade",
@@ -320,7 +310,7 @@ function Index() {
             </div>
           </div>
 
-          {/* 3D Planetary Orbital Ring Component */}
+          {/* 3D Planetary Orbital Ring Component (Brands Orbiting) */}
           <div className="w-full flex justify-center items-center">
             <OrbitalHeaterHero imageSrc={heatersHero} />
           </div>
@@ -376,26 +366,6 @@ function Index() {
                 Chamar Técnico Agora no WhatsApp
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Brands Marquee */}
-      <section className="overflow-hidden border-y border-border/70 bg-tecgaz-dark-900 py-10 my-16">
-        <p className="px-[5%] text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-          Principais marcas atendidas e comercializadas com garantia
-        </p>
-        <div className="brand-scroll mt-7 overflow-x-auto overscroll-x-contain sm:overflow-hidden">
-          <div className="marquee-track">
-            {[...brands, ...brands].map((brand, index) => (
-              <span
-                key={`${brand}-${index}`}
-                className="mx-2 flex shrink-0 items-center gap-3 rounded-xl border border-border/60 bg-card/40 px-8 py-4 text-lg font-bold text-foreground shadow-sm backdrop-blur-sm sm:mx-3"
-              >
-                <i className="fa-solid fa-certificate text-primary" />
-                {brand}
-              </span>
-            ))}
           </div>
         </div>
       </section>
